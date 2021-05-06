@@ -1,7 +1,7 @@
-//  Swift Team 1Unit
+//  Swift Team 1 Unit
 //  05/01/2021
 //  ViewController.swift
-//  Calculator
+//  Calculator App
 //
 //
 //
@@ -34,7 +34,7 @@ class ViewController: UIViewController
     {
         if(validInput()) {
         let checkedWorkingsForPercent = workings.replacingOccurrences(of: "%", with: "*0.01")
-        let expression = NSExpression(format: workings)
+        let expression = NSExpression(format: checkedWorkingsForPercent)
         let result = expression.expressionValue(with: nil, context: nil) as! Double
         let resultString = formatResult(result: result)
         calculatorResults.text = resultString
