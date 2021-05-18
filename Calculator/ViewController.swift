@@ -14,12 +14,18 @@ class ViewController: UIViewController
     @IBOutlet weak var calculatorWorkings: UILabel!
     @IBOutlet weak var calculatorResults: UILabel!
     
+    
+    @IBOutlet weak var eqButton: UIStackView!
+    
     var workings: String = ""
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         clearAll()
+        
+        eqButton.layer.cornerRadius = 30
+        eqButton.layer.masksToBounds = true
     }
 
     func clearAll()
